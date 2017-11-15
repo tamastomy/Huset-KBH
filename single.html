@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Event</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation-flex.min.css'>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans|Open+Sans|Playfair+Display|Poppins|Roboto|Roboto+Mono" rel="stylesheet">
+    <script src="js/classie.js"></script>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <script src="js/modernizr.custom.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<header>
+    <nav class="cbp-spmenu cbp-spmenu-left" id="cbp-spmenu-s1">
+        <div class="menu-container">
+            <section id="menulist">
+                <li><a href="index.html">All Events</a></li>
+            </section>
+
+            <template id="linkTemplate">
+        <li><a href="#">Celery seakale</a></li>
+        </template></div>
+
+    </nav>
+    <menu class="menuwrapp">
+        <a href="#" class="menuicon" id="showLeftPush"><span></span></a>
+    </menu>
+
+    <div class="brand">
+        <img class="logo" src="img/husetlogo.svg" alt="">
+    </div>
+</header>
+
+
+
+<body class="cbp-spmenu-push">
+
+
+
+    <img class="logobg01" src="img/bg.png" alt="logobg">
+    <img class="logobg02" src="img/bgT.png" alt="logobg">
+
+
+
+    <section id="singleevent" class="row">
+        <article class="single-event preview-columns">
+
+
+            <button class="button" type="button" name="button">BUY TICKETS</button>
+            <h1 class="title"></h1>
+            <div class="line rotate-line1"></div>
+            <h6 class="available">&nbsp;</h6>
+            <div class="preview-event">
+                <div class="rotate-line2"></div>
+                <img src="" alt="">
+            </div>
+            <div class="preview-infowrapp">
+                <h4 class="genre"></h4>
+                <div class="preview-socialwrapp">
+                    <a class="social-icon twitter fa fa-twitter" href=""></a>
+                    <a class="social-icon facebook fa fa-facebook" href=""></a>
+                </div>
+                <div class="infocolumn01">
+                    <h6></h6>
+                    <h3 class="location"></h3>
+                </div>
+                <div class="infocolumn02">
+                    <h4 class="movie"></h4>
+                    <h3></h3>
+                </div>
+            </div>
+            <p class="description"></p>
+
+            <div class="line"></div>
+
+        </article>
+    </section>
+
+
+
+
+
+
+    <script>
+        var menuLeft = document.getElementById('cbp-spmenu-s1'),
+
+            showLeftPush = document.getElementById('showLeftPush'),
+
+            body = document.body;
+
+
+        showLeftPush.onclick = function() {
+            classie.toggle(this, 'activemenu');
+            classie.toggle(body, 'cbp-spmenu-push-toright');
+            classie.toggle(menuLeft, 'cbp-spmenu-open');
+            disableOther('showLeftPush');
+        };
+
+        function disableOther(button) {
+
+            if (button !== 'showLeftPush') {
+                classi.toggle(showLeftPush, 'disabled');
+            }
+
+        }
+
+    </script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/foundation.min.js'></script>
+
+    <script src="js/index.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>

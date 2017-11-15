@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Web App</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation-flex.min.css'>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans|Open+Sans|Playfair+Display|Poppins|Roboto|Roboto+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/classie.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+</head>
+
+<header>
+
+    <nav class="cbp-spmenu cbp-spmenu-left" id="cbp-spmenu-s1">
+        <div class="menu-container">
+            <section id="menulist">
+                <li><a href="index.html">All Events</a></li>
+            </section>
+
+            <template id="linkTemplate">
+        <li><a href="#"></a></li>
+        </template></div>
+
+    </nav>
+
+
+
+
+    <menu class="menuwrapp">
+
+
+        <a href="#" class="menuicon" id="showLeftPush"><span></span></a>
+        <h3 class="genre-title"></h3>
+
+    </menu>
+    <div class="brand">
+        <img class="logo" src="img/husetlogo.svg" alt="">
+    </div>
+</header>
+
+
+<body class="cbp-spmenu-push">
+    <section class="submenu hide">
+        <div class="submenuwrapp subnav maxheight" role="navigation"><span>&nbsp;</span>
+            <ul class="subnavigation">
+                <div class="subcategory"><template id="subcatTemplate"><li><a class="subcategoryitem" href=""></a></li></template></div>
+            </ul>
+
+        </div>
+        <a href='#' id="toggle"><img class="subicon" src="img/icon.svg" alt="subicon"></a>
+    </section>
+    <iframe src="https://open.spotify.com/embed?uri=spotify:user:spotify:playlist:3rgsDhGHZxZ9sB9DQWQfuf" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+
+    <section class="row">
+        <img class="logobg01" src="img/bg.png" alt="logobg">
+        <img class="logobg02" src="img/bgT.png" alt="logobg">
+
+        <section class="home-columns" id="list">
+
+
+        </section>
+
+        <template id="eventtemplate">
+            <div class="wrapper">
+            <h6 class="available">&nbsp;</h6>
+            <article class="event">
+
+                <div class="topwrapp">
+
+
+                <a class="link" href="">
+                <img src="img/image.jpg" alt=""></a></div>
+                <div class="bottomwrapp">
+                <div class="home-infowrapp">
+
+                    <div class="genrewrapp">
+
+
+                    </div>
+
+                    <h3 class="title"></h3>
+                    <h4 class="location"></h4>
+                    <h6 class="date"></h6>
+                    <h4 class="price"></h4>
+                    <div class="button-social-wrapp">
+                        <button class="button" type="button" name="button">BUY TICKETS</button>
+                    <div class="socialwrapp">
+
+                            <h4 class="home-category"></h4>
+                        <a class="social-icon twitter fa fa-twitter" href=""></a>
+                        <a class="social-icon facebook fa fa-facebook" href=""></a>
+                    </div>
+                    </div>
+                </div></div>
+            </article>
+                </div>
+        </template>
+
+
+
+    </section>
+    <script>
+        var menuLeft = document.getElementById('cbp-spmenu-s1'),
+
+            showLeftPush = document.getElementById('showLeftPush'),
+
+            body = document.body;
+
+
+        showLeftPush.onclick = function() {
+            classie.toggle(this, 'activepush');
+            classie.toggle(body, 'cbp-spmenu-push-toright');
+            classie.toggle(menuLeft, 'cbp-spmenu-open');
+            disableOther('showLeftPush');
+        };
+
+        function disableOther(button) {
+
+            if (button !== 'showLeftPush') {
+                classi.toggle(showLeftPush, 'disabled');
+            }
+
+        }
+
+    </script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/foundation.min.js'></script>
+    <script src="main.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>

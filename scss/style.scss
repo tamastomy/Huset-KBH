@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+$font-size-default: 16px !default;
+$font-size-min: 14px;
+$font-size-max: 18px;
+
+$viewport-min: 320px;
+$viewport-max: 1440px;
+
+@mixin responsive-font-sizing($font-min, $font-max, $query-min, $query-max, $font-base: $font-size-default) {
+  $base-rem: strip-unit($font-min / $font-base) + rem;
+
+  @media screen and (min-width: strip-unit($query-min / $font-base) + em) {
+    font-size: calc(#{$base-rem} + #{strip-unit($font-max - $font-min)} * (100vw - #{$query-min}) / #{strip-unit($query-max - $query-min)});
+  }
+
+  @media screen and (min-width: strip-unit($query-max / $font-base) + em) {
+    font-size: strip-unit($font-max / $font-base) + rem;
+  }
+}
+
+// Alias to responsive-font-sizing
+@mixin rfs($font-min, $font-max, $query-min, $query-max) {
+  @include responsive-font-sizing($font-min, $font-max, $query-min, $query-max);
+}
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+// CSS begins here
+html {
+  @include rfs($font-size-min, $font-size-max, $viewport-min, $viewport-max);
+  line-height: 1.618; // Golden ratio
+}
+
+.row {
+  max-width: 1440px;
+}

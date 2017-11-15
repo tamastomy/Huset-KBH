@@ -1,0 +1,211 @@
+        /* General styles for all menus */
+
+        :root {
+            --white: white;
+            --black: black;
+            --lightblue: #e1e8ef;
+            --pink: #fd898f;
+            --blue: #5363e2;
+            --deepblue: #152157;
+            --red: #e8253d;
+            --purple: #906ab8;
+            --trq: #6bd3cf;
+            --black01: #222;
+            --black02: #444;
+            --grey: #666;
+        }
+
+        .cbp-spmenu {
+            background: linear-gradient(45deg, #5564e1, #f18694);
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            z-index: 12;
+
+        }
+
+        .cat-color {
+            width: 5vw;
+            height: 4px;
+            z-index: 200;
+            position: relative;
+
+        }
+
+        .cbp-spmenu h3 {
+
+            font-size: 1.9em;
+            padding: 20px;
+            margin: 0;
+            font-weight: 300;
+        }
+
+        .cbp-spmenu a {
+            display: block;
+            font-family: 'Roboto', sans-serif;
+            font-size: 3rem;
+            color: white;
+            font-weight: 300;
+
+        }
+
+        .cbp-spmenu li {
+            list-style: none;
+            display: inline-block;
+            float: left;
+            text-align: right;
+
+
+        }
+
+        .cbp-spmenu a:hover {}
+
+        .menu {
+            position: absolute;
+            z-index: 3;
+        }
+
+        .menu-button {
+            width: 40px;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            background-color: red;
+            margin: 0;
+            padding: 0;
+        }
+
+
+
+        .menu-container {
+            width: 70%;
+
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+        }
+
+        #menulist {
+            display: flex;
+            flex-direction: column;
+            padding-right: 20px;
+        }
+
+        .menuicon {
+            z-index: 100;
+
+            padding: 16px 10px 16px 10px;
+        }
+
+        .location-menu {
+            padding-left: 20px;
+            width: 50%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 50%;
+        }
+
+        /* Orientation-dependent styles for the content of the menu */
+
+        /* Vertical menu that slides from the left or right */
+
+        .cbp-spmenu-left {
+            left: -250vw;
+        }
+
+        .cbp-spmenu-left.cbp-spmenu-open {
+            left: 0px;
+        }
+
+        /* Horizontal menu that slides from the top or bottom */
+
+        /* Push classes applied to the body */
+
+        .cbp-spmenu-push {
+            overflow-x: hidden;
+            position: relative;
+            left: 0;
+        }
+
+        .cbp-spmenu-push-toright {}
+
+        /*Button*/
+
+        a.menuicon {
+            cursor: pointer;
+        }
+
+        .menuicon span {
+            position: relative;
+            display: block;
+            width: 22px;
+            height: 3px;
+            background: #222;
+            transition: all .2s ease-in-out;
+        }
+
+        .menuicon span:before,
+        .menuicon span:after {
+            position: absolute;
+            background: #222;
+            content: '';
+            width: 22px;
+            height: 3px;
+            transition: all .2s ease-in-out;
+        }
+
+        .menuicon span:before {
+            top: -8px;
+        }
+
+        .menuicon span:after {
+            top: 8px;
+        }
+
+        .menuicon.active span {
+            background: transparent;
+        }
+
+        .menuicon.active span:before {
+            transform: rotate(45deg) translate(5px, 6px);
+        }
+
+        .menuicon.active span:after {
+            transform: rotate(-45deg) translate(5px, -6px);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        /* Transitions */
+
+        .cbp-spmenu,
+        .cbp-spmenu-push {
+            -webkit-transition: all 0.4s ease;
+            -moz-transition: all 0.4s ease;
+            transition: all 0.4s ease;
+        }
+
+        /* Example media queries */
+
+        @media screen and (max-width: 55.1875em) {
+            .cbp-spmenu-horizontal {
+                font-size: 75%;
+                height: 110px;
+            }
+            @media screen and (max-height: 26.375em) {
+                .cbp-spmenu-left,
+                .cbp-spmenu-push-toleft {
+                    left: -100vw;
+                }
